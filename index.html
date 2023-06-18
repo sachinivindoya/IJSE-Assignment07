@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="" xmlns="" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/images/image-removebg-preview.png" alt="logo" >
+    <meta name="author" content="Sachini ">
+    <meta name="description" content=" POS system">
+    <title>Assignment 07 | POS </title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/boostrap/css/bootstrap.css">
+
+</head>
+<body>
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light" >
+    <div class="container-fluid ">
+        <a class="navbar-brand text-white" href="#" id="btnDashboard"><img src="assets/images/image-removebg-preview.png" width="40">
+            | Techie Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="#customerform"
+                       id="btnCustomer">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#itemform" id="btnItem">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="#orderform" id="btnOrder">Order</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid mt-5 " id="dashboardform">
+    <!--  ---------Dashboard---------------->
+    <div class="row">
+        <div class="col-md-6">
+            <p class="title">
+                BEST DIGITAL DESTINATION
+            </p>
+            <P class="des">
+                Welcome to Techie Market, <br>your one-stop destination for all your computing needs!
+                We are delighted to offer you a world of cutting-edge technology, exceptional customer service,
+                and a wide range of products that will empower and enhance your digital experience.
+            </P>
+            <br>
+            <p class="cart">
+                <img src="assets/images/images-removebg-preview.png" width="30">
+                Shop Now !
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="assets/images/network.png" class="logo">
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!--Customer Form-->
+
+<div class="container-fluid mt-5" id="customerform">
+    <h1 class="mx-3">Customer Form</h1>
+    <div class="row mt-3 p-3">
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="bg-warning card-header text-black-50" style="font-size: 25px">
+                    Customer Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Customer ID:</lable>
+                            <input type="text" id="txtCustomerId0" class="form-control">
+                            <span class="control-error" id="lblcusid"></span>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Customer Name:</lable>
+                            <input type="text" id="txtCustomerName0" class="form-control">
+                            <span class="control-error" id="lblcusname"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Customer Address:</lable>
+                            <input type="text" id="txtCustomerAddress0" class="form-control">
+                            <span class="control-error" id="lblcusaddress"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn btn-outline-success fw-bold" id="btnCustomerAdd">Add</button>
+                            <button type="button" class="btn btn-outline-warning fw-bold" id="btnCustomerUpdate">UPDATE</button>
+                            <button type="button" class="btn btn-outline-danger fw-bold" id="btnCustomerDelete">DELETE</button>
+                            <button type="button" class="btn btn-danger fw-bold" id="btnCustomerCancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 col-lg-6">
+            <table class="table table-hover border mt-3 p-3">
+                <thead class="text-white" >
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Customer Address</th>
+                </tr>
+                </thead>
+                <tbody class="bg-secondary text-white" id="tblCustomer">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!--Item Form-->
+
+<div class="container-fluid mt-5 " id="itemform">
+    <h1 class="mx-3">Item Form</h1>
+    <div class="row mt-3 p-3">
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="bg-warning card-header text-black-50" style="font-size: 25px">
+                    Item Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3 ">
+                        <div class="form-group col-6">
+                            <lable>Item Code:</lable>
+                            <input type="text" id="txtItemCode0" class="form-control">
+                            <span class="control-error" id="lblitemcode"></span>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Item Description:</lable>
+                            <input type="text" id="txtDescription0" class="form-control">
+                            <span class="control-error" id="lbldescription"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Quantity:</lable>
+                            <input type="text" id="txtQty0" class="form-control">
+                            <span class="control-error" id="lblqty"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Unit Price:</lable>
+                            <input type="text" id="txtUnitPrice0" class="form-control">
+                            <span class="control-error" id="lblprice"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn btn-outline-success fw-bold" id="btnItemAdd">Add</button>
+                            <button type="button" class="btn btn-outline-warning fw-bold" id="btnItemUpdate">UPDATE</button>
+                            <button type="button" class="btn btn-outline-danger fw-bold" id="btnItemDelete">DELETE</button>
+                            <button type="button" class="btn btn-danger fw-bold" id="btnItemCancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 col-lg-6">
+            <table class="table table-hover border mt-3 p-3 ">
+                <thead class="text-white">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty On Hand</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody class="bg-secondary text-white" id="tblItem">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Order Form-->
+
+<div class="container-fluid mt-5 " id="orderform">
+    <h1 class="mx-3">Order Form</h1>
+    <div class="row mt-3 p-3">
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="bg-warning card-header text-black-50" style="font-size: 25px">
+                    Invoice Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-5 ">
+                            <lable>Order ID:</lable>
+                            <input type="text" id="txtOrderId" class="form-control">
+                            <span class="control-error" id="lblorderid"></span>
+                        </div>
+                        <div class="form-group col-7 ">
+                            <lable>Order Date:</lable>
+                            <input type="date" id="txtDate" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Select Customer ID:</lable>
+                            <select class="form-control" id="cmbCustomerId">
+                                <option selected="selected" disabled="disabled">-Select Customer-</option>
+                                <span class="control-error" id="lblselectid"></span>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Customer ID:</lable>
+                            <input type="text" id="txtCustomerId" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Customer Name:</lable>
+                            <input type="text" id="txtCustomerName" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Customer Salary:</lable>
+                            <input type="text" id="txtCustomerSalary" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Customer Address:</lable>
+                            <input type="text" id="txtCustomerAddress" class="form-control" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="bg-warning card-header text-black-50" style="font-size: 25px">
+                    Item Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Select Item Code:</lable>
+                            <select class="form-control" id="cmbItemCode">
+                                <option selected="selected" disabled="disabled">-Select Item-</option>
+                                <span class="control-error" id="lblselectcode"></span>
+                            </select>
+                        </div>
+                        <div class="form-group col-6 ">
+                            <lable>Item Code:</lable>
+                            <input type="text" id="txtItemCode" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Description:</lable>
+                            <input type="text" id="txtDescription" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>QTY on Hand:</lable>
+                            <input type="text" id="txtQtyOnHand" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Unit Price</lable>
+                            <input type="text" id="txtUnitPrice" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-8">
+                            <lable>Order Quantity</lable>
+                            <input type="number" min="0" id="txtOrderQTY" class="form-control">
+                            <span class="control-error" id="lblorderqty"></span>
+                        </div>
+                        <div class="form-group col-4 mt-4">
+                            <button type="submit" class="btn  bg-success" id="btnAddToCart"><img src="assets/images/images-removebg-preview.png" width="50"> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-12">
+            <div class="bg-white card">
+                <div class="bg-warning card-header text-black-50" style="font-size: 25px">
+                    Payment Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Total:</lable>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-primary" style="font-size: 30px" id="lblTotal">0.00</span>
+                                Rs/=
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Sub Total:</lable>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-danger" style="font-size: 30px" id="lblSubTotal">
+                                    0.00
+                                </span>
+                                Rs/=
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Payment:</lable>
+                            </div>
+                            <div class="col-12">
+                                <input type="number" min="0" class="form-control" id="txtPayment">
+                                <span class="control-error" id="lblpayment"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Discount:</lable>
+                            </div>
+                            <div class="col-12">
+                                <input type="number" min="0" class="form-control" id="txtDiscount">
+                                <span class="control-error" id="lbldisount"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Balance:</lable>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="txtBalance" disabled>
+                                <span class="control-error" id="lblbalance"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-4">
+                            <button type="submit" class="btn btn-outline-success mt-4 fw-bold"
+                                    style="text-align: center" id="btnPlaceOrder">Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover border mt-3 p-3 ">
+        <thead class=" text-white">
+        <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Buying Qty</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody class="bg-secondary text-black" id="tblCart"></tbody>
+    </table>
+</div>
+
+</body>
+</html>
